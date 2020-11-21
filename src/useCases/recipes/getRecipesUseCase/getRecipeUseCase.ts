@@ -15,22 +15,18 @@ export class GetRecipeUseCase{
 
     const keywords = params.split(',', 3)
     const recipes = await this.RecipePuppyProvider.getRecipeByIngredients(keywords)
-    recipes.map(async recipe => {
+    const newRecipes = recipes.map( async recipe => {
+      const gif = await this.GiphyProvider.getGifByName(recipe.title)
+      console.log(gif)
       return {
         title: recipe.title,
         ingredients: recipe.ingredients.split(',').sort((a,b) => (a > b) ? 1 : ((b > a) ? -1 : 0 ) ),
         link: recipe.href,
-        gif: this.GiphyProvider.getGifByName(recipe.title)
-
+        gif
       }
     })
 
-    return {
-      keywords,
-      recipes
-    }
-
-    
+    return Promise.all(newRecipes).then(response => response)
   }
 
 }
