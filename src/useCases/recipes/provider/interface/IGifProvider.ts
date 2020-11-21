@@ -1,3 +1,3 @@
 export interface IGifProvider{
-  getGifBy
+  getGifByName(name: string): Promise<void>
 }
