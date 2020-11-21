@@ -5,6 +5,8 @@
   "author": "Guilherme Brito <guilhermebritto.prof@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.21.0",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-async-errors": "^3.1.1"
   },
@@ -13,6 +15,7 @@
     "test": "jest --detectOpenHandles"
   },
   "devDependencies": {
+    "@types/axios": "^0.14.0",
     "@types/express": "^4.17.9",
     "eslint": "^7.14.0",
     "prettier": "^2.2.0",
