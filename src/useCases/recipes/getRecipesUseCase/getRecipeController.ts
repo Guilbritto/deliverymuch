@@ -7,8 +7,8 @@ export class GetRecipeController{
   async handle(request: Request, response: Response){
     const {query} = request
     
-    await this.getRecipeUseCase.execute(query.i as string);
-
+    const recipes = await this.getRecipeUseCase.execute(query.i as string);
+    return response.status(200).json(recipes)
 
   }
 }
