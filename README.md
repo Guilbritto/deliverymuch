@@ -32,7 +32,7 @@ Para poder fazer uma chamado basta bater no IP da maquina onde está rodando o c
 
 ## Endpoints
 
-Existe somente um endpoint nessa api que é `/recipes` e ele espera o parâmetro `i` na url, e esse parâmetro espera 3 ingredientes que serão utilizados para fazer a busca das receitas, ficando a url da seguinte maneira.
+Existe somente um endpoint nessa api que é `/recipes` e ele espera o parâmetro `i` na url, e esse parâmetro espera até 3 ingredientes que serão utilizados para fazer a busca das receitas, ficando a url da seguinte maneira.
 
 `http://localhost:3333/recipes?i=Potato,Garlic,Onion`
 
