@@ -15,7 +15,6 @@ export class GiphyProvider implements IGifProvider{
         offset: process.env.GIPHY_API_OFFSET,
         q: name.replace(' ', '%20').replace('\n', '')
       }})
-      console.log(response.data.data[0].embed_url)
       return response.data.data[0].embed_url
     }catch(err){
       throw new AppError('Ocorreu um erro ao tentar carregar as Gifs')
