@@ -1,6 +1,5 @@
 import { IGif, IGifProvider } from "./interface/IGifProvider";
-import axios, { AxiosError } from 'axios'
-import { response } from "express";
+import axios from 'axios'
 import { AppError } from "../../../errors/AppError";
 
 export class GiphyProvider implements IGifProvider{

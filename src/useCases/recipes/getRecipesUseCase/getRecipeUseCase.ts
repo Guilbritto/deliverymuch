@@ -25,7 +25,10 @@ export class GetRecipeUseCase{
       }
     })
 
-    return Promise.all(newRecipes).then(response => response)
+    return {
+      keywords,
+      recipes: Promise.all(newRecipes).then(response => response)
+    }
   }
 
 }
