@@ -1,0 +1,14 @@
+version: '2'
+services:
+  app:
+    build: .
+    environment:
+      RECIPE_URL: http://www.recipepuppy.com/api/
+      GIPHY_URL: https://api.giphy.com/v1/gifs/search
+      GIPHY_API_KEY: 6DcawUsWO611b8uFGafbGyHMEuR7fsXd
+      GIPHY_API_LIMIT: 1
+      GIPHY_API_OFFSET: 0
+      GIPHY_API_RATING: g
+      GIPHY_API_LANG: en
+    ports:
+      - '3333:3333'
