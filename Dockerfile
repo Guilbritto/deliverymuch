@@ -10,4 +10,4 @@ COPY dist .
 
 EXPOSE 3333
 
-CMD [ "node", "dist/server.js" ]
+CMD [ "node", "server.js" ]
