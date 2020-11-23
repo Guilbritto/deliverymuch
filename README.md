@@ -8,7 +8,7 @@ Para rodar o projeto deve-se ter instalado as seguintes ferramentas:
 
 Primeiro vamos fazer o clone da aplicação:
 
-`git clone git@github.com:Guilbritto/deliverymuch.git`
+`git clone https://github.com/Guilbritto/deliverymuch.git`
 
 ### Rodando sem Docker
 Acesse a pasta do projeto e rode:
