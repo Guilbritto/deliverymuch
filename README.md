@@ -13,7 +13,7 @@ Primeiro vamos fazer o clone da aplicação:
 
 ### Rodando sem Docker
 Acesse a pasta do projeto e rode:
-`yarn install` ou `npm install`
+`yarn` ou `npm install`
 
 Aguarde o processo terminar e execute:
 
