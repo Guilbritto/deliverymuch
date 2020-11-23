@@ -22,6 +22,10 @@ Aguarde o processo terminar e execute:
 ### Rodar com Docker 
 Logo após o término do clone devemos entrar na pasta e rodar o seguinte comando:
 
+`yarn build` ou `npm run build`
+
+Com isso temos a versão de produção da nossa aplicação, agora vamos subir nosso container:
+
 `docker-compose up -d`
 
 # Requisições
