@@ -1,5 +1,6 @@
 import {IRecipe, IRecipeProvider} from './interface/IRecipeProvider'
 import axios from 'axios'
+import { AppError } from '../../../errors/AppError'
 
 export interface IRecipePuppy {
   title:   string;
@@ -12,8 +13,13 @@ export class RecipePuppy implements IRecipeProvider{
   
   async getRecipeByIngredients(ingredients: string[]){
 
-    const response = await axios.get<IRecipePuppy>(`${process.env.RECIPE_URL}?i=${ingredients.join(',')}`)
-    return response.data.results
+    try{
 
+      const response = await axios.get<IRecipePuppy>(`${process.env.RECIPE_URL}?i=${ingredients.join(',')}`)
+      return response.data.results
+    }catch{
+      throw new AppError('Não foi possivel buscar receitas, tente novamente mais tarde')
+    }
+      
   }
 }

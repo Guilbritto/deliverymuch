@@ -16,6 +16,7 @@ export class GetRecipeUseCase{
     const keywords = params.split(',', 3)
     const recipes = await this.RecipePuppyProvider.getRecipeByIngredients(keywords)
     const newRecipes = recipes.map( async recipe => {
+
       const gif = await this.GiphyProvider.getGifByName(recipe.title)
       return {
         title: recipe.title,
@@ -24,11 +25,14 @@ export class GetRecipeUseCase{
         gif
       }
     })
-
-    return {
-      keywords,
-      recipes: Promise.all(newRecipes).then(response => response)
+    return  Promise.all(newRecipes).then(response => {
+      return {
+        keywords,
+        response
+      }
     }
+   )
+    
   }
 
 }
