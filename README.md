@@ -8,7 +8,7 @@ Para rodar o projeto deve-se ter instalado as seguintes ferramentas:
 
 Primeiro vamos fazer o clone da aplicação:
 
-`git clone git@github.com:Guilbritto/deliverymuch.git`
+`git clone https://github.com/Guilbritto/deliverymuch.git`
 
 ### Rodando sem Docker
 Acesse a pasta do projeto e rode:
@@ -33,7 +33,7 @@ Para poder fazer uma chamado basta bater no IP da maquina onde está rodando o c
 
 Existe somente um endpoint nessa api que é `/recipes` e ele espera o parâmetro `i` na url, e esse parâmetro espera 3 ingredientes que serão utilizados para fazer a busca das receitas, ficando a url da seguinte maneira.
 
-`http://localhost:3333?i=Tomato,Potato,Avocato`
+`http://localhost:3333/recipes?i=Potato,Garlic,Onion`
 
 OBS: Os ingredientes devem ser informados em ingles, devem ser passados separados por vírgula e há um limite de 3 ingredientes, caso passado ele irá desconsiderar os ingredientes.
 
