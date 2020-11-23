@@ -1,3 +1,4 @@
+![badge](https://img.shields.io/badge/Coverage-100%25-green)
 # Instalação
 
 Para rodar o projeto deve-se ter instalado as seguintes ferramentas:
