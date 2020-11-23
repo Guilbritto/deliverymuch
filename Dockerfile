@@ -6,11 +6,8 @@ COPY package*.json ./
 
 RUN npm install
 
-COPY . .
+COPY dist .
 
 EXPOSE 3333
 
-CMD [ "npm", "build" ]
-
 CMD [ "node", "dist/server.js" ]
-
